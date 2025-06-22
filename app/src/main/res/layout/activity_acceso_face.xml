@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AccesoFace"
-    android:background="@color/cardview_dark_background"
+    android:background="@drawable/login_background"
     android:padding="10dp">
 
     <TextView
@@ -16,7 +16,7 @@
         android:text="Párate frente a la cámara y sonríe 😀"
         android:textStyle="bold"
         android:textSize="40sp"
-        android:textColor="#F4E4BA"
+        android:textColor="@color/white"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,10 +41,11 @@
         android:id="@+id/cancel_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Regresar"
-        android:textSize="35sp"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
+        android:text="   Regresar   "
+        android:textSize="30sp"
+        android:padding="25dp"
+        android:backgroundTint="@color/white"
+        android:textColor="#001B2E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

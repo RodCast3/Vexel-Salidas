@@ -114,13 +114,13 @@ class Respuesta : AppCompatActivity() {
                             val usuario = json.getString("mensaje")
                             layout.setBackgroundColor(Color.parseColor("#1F693C"))
                             imageView.setImageResource(R.drawable.autorizo)
-                            statusText.text = "Acceso autorizado \n\n Bienvenido: \n$usuario"
+                            statusText.text = "Salida registrada \n\n Vuelva pronto: \n$usuario"
                         } else {
                             val json = JSONObject(response.body?.string())
                             val mensaje = json.getString("mensaje")
                             layout.setBackgroundColor(Color.parseColor("#F03A47"))
                             imageView.setImageResource(R.drawable.denegado)
-                            statusText.text = "Acceso denegado: \n\n$mensaje"
+                            statusText.text = "Salida no registrada: \n\n$mensaje"
                         }
                         cerrarVentana()
                     }
@@ -162,7 +162,7 @@ class Respuesta : AppCompatActivity() {
                         val usuario = json.getString("usuario")
                         layout.setBackgroundColor(Color.parseColor("#1F693C"))
                         imageView.setImageResource(R.drawable.autorizo)
-                        statusText.text = "Acceso autorizado \n\n Bienvenido: \n$usuario"
+                        statusText.text = "Salida registrada \n\n Vuelva pronto: \n$usuario"
                         val mp = MediaPlayer.create(this@Respuesta, R.raw.pass)
                         mp.start()
                     } else {
@@ -170,7 +170,7 @@ class Respuesta : AppCompatActivity() {
                         val mensaje = json.optString("razon", "Error desconocido")
                         layout.setBackgroundColor(Color.parseColor("#F03A47"))
                         imageView.setImageResource(R.drawable.denegado)
-                        statusText.text = "Acceso denegado \n\n$mensaje"
+                        statusText.text = "Salida no registrada \n\n$mensaje"
                         val mp = MediaPlayer.create(this@Respuesta, R.raw.error)
                         mp.start()
                     }

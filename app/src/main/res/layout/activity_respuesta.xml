@@ -6,48 +6,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Respuesta"
-    android:background="@color/cardview_dark_background"
+    android:background="@drawable/login_background"
     android:padding="16dp">
 
-    <!-- Texto de estado -->
-    <TextView
-        android:id="@+id/statusText"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Esperando Autorización..."
-        android:textAlignment="center"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:textColor="#F4E4BA"
-        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="50dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
 
-    <!-- Imagen en el centro -->
-    <ImageView
-        android:id="@+id/responseImage"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:contentDescription="Imagen de respuesta"
-        android:src="@drawable/toby"
-        app:layout_constraintTop_toBottomOf="@id/statusText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="100dp" />
+        <!-- Texto de estado -->
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esperando Autorización..."
+            android:textAlignment="center"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center"/>
+
+        <!-- Imagen en el centro -->
+        <ImageView
+            android:id="@+id/responseImage"
+            android:layout_marginTop="100dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:contentDescription="Imagen de respuesta"
+            android:src="@drawable/toby"
+            android:layout_gravity="center"
+            android:layout_marginBottom="100dp"
+            />
+
+    </LinearLayout>
+
+
 
     <!-- Botón al fondo -->
     <Button
         android:id="@+id/cancel_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:text="Regresar"
         android:textSize="35sp"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#009688"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="30dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

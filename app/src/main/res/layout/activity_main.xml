@@ -6,52 +6,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/cardview_dark_background"
+    android:background="@drawable/login_background"
     android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SALIDA \n\nSelecciona el tipo de usuario"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03"
-        android:textSize="45sp"
-        android:textAlignment="center"
-        android:textColor="#F4E4BA"
-        android:textStyle="bold"/>
-
-    <Button
-        android:id="@+id/btnFace"
-        android:layout_width="350dp"
-        android:layout_height="130dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.4"
-        android:text="Usuario Regular"
-        android:textSize="40sp"
-        android:textColor="@color/white"
-        android:backgroundTint="#4CAF50" />
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <Button
-        android:id="@+id/btnQR"
-        android:layout_width="350dp"
-        android:layout_height="130dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.75"
-        android:text="Invitado"
-        android:textSize="40sp"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SALIDA\n\nSelecciona el tipo de usuario"
+            android:textSize="45sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
 
+        <Button
+            android:id="@+id/btnFace"
+            android:layout_width="300dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="60dp"
+            android:layout_gravity="center"
+            android:text="Regular"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="#001B2E"
+            android:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/btnQR"
+            android:layout_width="300dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:text="Invitado"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/white"
+            android:textColor="#001B2E"/>
+
+        <ImageView
+            android:layout_marginTop="30dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/vexel"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
