@@ -1,62 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="@drawable/login_background"
     android:padding="16dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topGuideline"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <TextView
+        android:id="@+id/textTitulo1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="SALIDA"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="35sp"
+        android:autoSizeMaxTextSize="55sp"
+        android:autoSizeStepGranularity="2sp"
+        app:layout_constraintWidth_percent="0.75"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toTopOf="@id/topGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textTitulo2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Selecciona el tipo de usuario"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="34sp"
+        android:autoSizeMaxTextSize="52sp"
+        android:autoSizeStepGranularity="2sp"
+        android:maxLines="2"
+        android:ellipsize="none"
+        app:layout_constraintWidth_percent="0.75"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/textTitulo1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_marginTop="8dp"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="SALIDA\n\nSelecciona el tipo de usuario"
-            android:textSize="45sp"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textStyle="bold"/>
+    <Button
+        android:id="@+id/btnFace"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Regular"
+        android:textStyle="bold"
+        android:textColor="#001B2E"
+        android:backgroundTint="@color/white"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="20sp"
+        android:autoSizeMaxTextSize="40sp"
+        android:autoSizeStepGranularity="2sp"
+        app:layout_constraintWidth_percent="0.75"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintTop_toBottomOf="@id/textTitulo2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnQR" />
 
-        <Button
-            android:id="@+id/btnFace"
-            android:layout_width="300dp"
-            android:layout_height="130dp"
-            android:layout_marginTop="60dp"
-            android:layout_gravity="center"
-            android:text="Regular"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            android:textColor="#001B2E"
-            android:backgroundTint="@color/white" />
+    <Button
+        android:id="@+id/btnQR"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Invitado"
+        android:textStyle="bold"
+        android:textColor="#001B2E"
+        android:backgroundTint="@color/white"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="20sp"
+        android:autoSizeMaxTextSize="40sp"
+        android:autoSizeStepGranularity="2sp"
+        app:layout_constraintWidth_percent="0.75"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintTop_toBottomOf="@id/btnFace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imgLogo" />
 
-        <Button
-            android:id="@+id/btnQR"
-            android:layout_width="300dp"
-            android:layout_height="130dp"
-            android:layout_marginTop="40dp"
-            android:layout_gravity="center"
-            android:text="Invitado"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            android:backgroundTint="@color/white"
-            android:textColor="#001B2E"/>
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/vexel"
+        app:layout_constraintWidth_percent="0.75"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintTop_toBottomOf="@id/btnQR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
-        <ImageView
-            android:layout_marginTop="30dp"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/vexel"
-            android:layout_gravity="center"
-            />
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
